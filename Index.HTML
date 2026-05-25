@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Truoux — Trade Without Barriers</title>
+<meta name="description" content="Truoux is a next-generation digital asset trading platform. Trade crypto with confidence, compliance, and cutting-edge tools.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">
+      <div class="nav__logo-mark">T</div>
+      Truoux
+    </a>
+    <div class="nav__links">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="list.html">Insights</a>
+      <a href="content.html">Whitepaper</a>
+    </div>
+    <div class="nav__cta">
+      <a href="#" class="btn btn--outline btn--sm">Log In</a>
+      <a href="#" class="btn btn--primary btn--sm">Get Started</a>
+    </div>
+    <div class="nav__hamburger" onclick="toggleMenu(this)">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section style="padding: 160px 0 100px; position: relative; overflow: hidden;">
+  <div class="glow-ball glow-ball--green" style="width:700px;height:700px;top:-200px;left:-200px;"></div>
+  <div class="glow-ball glow-ball--blue" style="width:500px;height:500px;bottom:-100px;right:-100px;"></div>
+  <div class="container">
+    <div style="max-width: 820px;">
+      <div class="page-hero__tag animate-up">
+        <span>●</span> Now with SEC Regulation D License
+      </div>
+      <h1 class="page-hero__title animate-up animate-up-d1">
+        Trade Without Barriers.<br><em>Assets Fully</em> Connected.
+      </h1>
+      <p class="page-hero__subtitle animate-up animate-up-d2">
+        Truoux is a next-generation digital asset exchange built for the new wave of global participants. Simplified access, intelligent tools, and institutional-grade security — all in one place.
+      </p>
+      <div class="flex-center gap-16 mt-32 animate-up animate-up-d3">
+        <a href="#" class="btn btn--primary btn--lg">Start Trading Free</a>
+        <a href="about.html" class="btn btn--outline btn--lg">Learn More</a>
+      </div>
+      <div style="margin-top: 48px; display: flex; gap: 32px; flex-wrap: wrap;" class="animate-up animate-up-d4">
+        <div>
+          <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--muted); letter-spacing: 0.1em; margin-bottom: 4px;">REGISTERED USERS</div>
+          <div style="font-family: var(--font-head); font-size: 1.5rem; font-weight: 800; color: var(--white); letter-spacing: -0.03em;">13M<span style="color:var(--accent)">+</span></div>
+        </div>
+        <div style="width:1px; background: var(--border);"></div>
+        <div>
+          <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--muted); letter-spacing: 0.1em; margin-bottom: 4px;">FOUNDED</div>
+          <div style="font-family: var(--font-head); font-size: 1.5rem; font-weight: 800; color: var(--white); letter-spacing: -0.03em;">2019</div>
+        </div>
+        <div style="width:1px; background: var(--border);"></div>
+        <div>
+          <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--muted); letter-spacing: 0.1em; margin-bottom: 4px;">LICENSES</div>
+          <div style="font-family: var(--font-head); font-size: 1.5rem; font-weight: 800; color: var(--white); letter-spacing: -0.03em;">MSB <span style="color:var(--accent)">&</span> SEC</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker__track" id="ticker">
+    <div class="ticker__item"><span class="ticker__name">BTC/USDT</span><span class="ticker__price">$67,420.50</span><span class="ticker__change up">+2.34%</span></div>
+    <div class="ticker__item"><span class="ticker__name">ETH/USDT</span><span class="ticker__price">$3,512.80</span><span class="ticker__change up">+1.87%</span></div>
+    <div class="ticker__item"><span class="ticker__name">SOL/USDT</span><span class="ticker__price">$172.44</span><span class="ticker__change up">+4.12%</span></div>
+    <div class="ticker__item"><span class="ticker__name">BNB/USDT</span><span class="ticker__price">$584.20</span><span class="ticker__change down">−0.63%</span></div>
+    <div class="ticker__item"><span class="ticker__name">ADA/USDT</span><span class="ticker__price">$0.4821</span><span class="ticker__change up">+3.01%</span></div>
+    <div class="ticker__item"><span class="ticker__name">AVAX/USDT</span><span class="ticker__price">$38.74</span><span class="ticker__change up">+5.21%</span></div>
+    <div class="ticker__item"><span class="ticker__name">DOT/USDT</span><span class="ticker__price">$8.23</span><span class="ticker__change down">−1.44%</span></div>
+    <div class="ticker__item"><span class="ticker__name">LINK/USDT</span><span class="ticker__price">$16.90</span><span class="ticker__change up">+2.07%</span></div>
+    <!-- duplicate for seamless loop -->
+    <div class="ticker__item"><span class="ticker__name">BTC/USDT</span><span class="ticker__price">$67,420.50</span><span class="ticker__change up">+2.34%</span></div>
+    <div class="ticker__item"><span class="ticker__name">ETH/USDT</span><span class="ticker__price">$3,512.80</span><span class="ticker__change up">+1.87%</span></div>
+    <div class="ticker__item"><span class="ticker__name">SOL/USDT</span><span class="ticker__price">$172.44</span><span class="ticker__change up">+4.12%</span></div>
+    <div class="ticker__item"><span class="ticker__name">BNB/USDT</span><span class="ticker__price">$584.20</span><span class="ticker__change down">−0.63%</span></div>
+    <div class="ticker__item"><span class="ticker__name">ADA/USDT</span><span class="ticker__price">$0.4821</span><span class="ticker__change up">+3.01%</span></div>
+    <div class="ticker__item"><span class="ticker__name">AVAX/USDT</span><span class="ticker__price">$38.74</span><span class="ticker__change up">+5.21%</span></div>
+    <div class="ticker__item"><span class="ticker__name">DOT/USDT</span><span class="ticker__price">$8.23</span><span class="ticker__change down">−1.44%</span></div>
+    <div class="ticker__item"><span class="ticker__name">LINK/USDT</span><span class="ticker__price">$16.90</span><span class="ticker__change up">+2.07%</span></div>
+  </div>
+</div>
+
+<!-- STATS -->
+<section class="section--sm">
+  <div class="container">
+    <div class="stats-row">
+      <div class="stat-box">
+        <div class="stat-box__num">13<span>M+</span></div>
+        <div class="stat-box__label">Registered Users</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-box__num">$<span>2.4B+</span></div>
+        <div class="stat-box__label">Daily Trading Volume</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-box__num">200<span>+</span></div>
+        <div class="stat-box__label">Countries Served</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-box__num">99.<span>99%</span></div>
+        <div class="stat-box__label">Platform Uptime</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE SLIDESHOW -->
+<section class="section section--dark">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Platform Highlights</div>
+      <h2 class="section-title">Built for Every Level<br>of Trader</h2>
+      <p class="section-subtitle">From your first trade to advanced algorithmic strategies, Truoux scales with your ambitions.</p>
+    </div>
+
+    <div class="slider">
+      <div class="slider__track" id="sliderTrack">
+
+        <!-- Slide 1 -->
+        <div class="slider__slide">
+          <div class="slider__slide-bg" style="background: linear-gradient(135deg, #00e5a0 0%, #0077ff 100%);"></div>
+          <div class="slider__tag">● Core Trading</div>
+          <h3 class="slider__title">Millisecond Matching Engine for Professional Traders</h3>
+          <p class="slider__desc">Our high-performance C++ core engine processes thousands of orders per second with sub-millisecond latency. Access spot, futures, and derivatives markets from one unified dashboard.</p>
+          <a href="#" class="btn btn--primary">Explore Trading</a>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slider__slide">
+          <div class="slider__slide-bg" style="background: linear-gradient(135deg, #7b5ea7 0%, #0077ff 100%);"></div>
+          <div class="slider__tag">● Security</div>
+          <h3 class="slider__title">Self-Evolving Security — 95% Cold Wallet Asset Custody</h3>
+          <p class="slider__desc">Dual-audited by Hacken and SlowMist. 95% of user funds in multi-sig cold wallets. AI behavioral monitoring triggers automatic lockdown in milliseconds on threat detection.</p>
+          <a href="about.html" class="btn btn--outline">Security Details</a>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slider__slide">
+          <div class="slider__slide-bg" style="background: linear-gradient(135deg, #f5b731 0%, #ff4d6d 100%);"></div>
+          <div class="slider__tag">● Compliance</div>
+          <h3 class="slider__title">SEC & FinCEN Licensed — Institutional-Grade Compliance</h3>
+          <p class="slider__desc">Operating under US MSB and SEC Regulation D licenses. Full AML/KYC framework with real-time suspicious transaction monitoring and sanction list synchronization.</p>
+          <a href="about.html" class="btn btn--outline">View Licenses</a>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="slider__slide">
+          <div class="slider__slide-bg" style="background: linear-gradient(135deg, #00e5a0 0%, #7b5ea7 100%);"></div>
+          <div class="slider__tag">● Growth Tools</div>
+          <h3 class="slider__title">Strategy Engine & API — Unleash Algorithmic Trading</h3>
+          <p class="slider__desc">Access our full REST and WebSocket API suite with granular rate controls. Connect external tools, build quantitative strategies, and deploy automated trading pipelines.</p>
+          <a href="#" class="btn btn--primary">API Docs</a>
+        </div>
+      </div>
+
+      <div class="slider__controls" style="padding: 0 64px 40px;">
+        <button class="slider__btn" onclick="slidePrev()">&#8592;</button>
+        <button class="slider__btn" onclick="slideNext()">&#8594;</button>
+        <div class="slider__dots" id="sliderDots">
+          <div class="slider__dot active" onclick="goToSlide(0)"></div>
+          <div class="slider__dot" onclick="goToSlide(1)"></div>
+          <div class="slider__dot" onclick="goToSlide(2)"></div>
+          <div class="slider__dot" onclick="goToSlide(3)"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CORE FEATURES GRID -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Platform Features</div>
+      <h2 class="section-title">Everything You Need,<br>Nothing You Don't</h2>
+    </div>
+    <div class="grid grid--3">
+      <div class="card">
+        <div class="card__icon card__icon--green">🔗</div>
+        <div class="card__title">Wealth Inclusion Engine</div>
+        <div class="card__text">Aggregate mainstream and emerging digital assets across multiple trade types. Intelligent allocation and dynamic rebalancing eliminate asset and liquidity barriers.</div>
+      </div>
+      <div class="card">
+        <div class="card__icon card__icon--blue">⚡</div>
+        <div class="card__title">Intelligent Trading Hub</div>
+        <div class="card__text">Scene-adaptive interface that flexibly switches between use cases and strategy requirements. Optimized order routing for efficient liquidity matching and minimal slippage.</div>
+      </div>
+      <div class="card">
+        <div class="card__icon card__icon--purple">🛡️</div>
+        <div class="card__title">Self-Evolving Security</div>
+        <div class="card__text">An iterative security system that captures and maps emerging threats in real time. Millisecond response to anomalies. Automatic reinforcement during high-volatility events.</div>
+      </div>
+      <div class="card">
+        <div class="card__icon card__icon--gold">🌐</div>
+        <div class="card__title">Cross-Domain Ecosystem</div>
+        <div class="card__text">Unified internal depth and external protocol resources for low-cost, high-efficiency matching across all asset classes. Invisible swap mechanism for cross-category conversions.</div>
+      </div>
+      <div class="card">
+        <div class="card__icon card__icon--green">📈</div>
+        <div class="card__title">User Empowerment Growth</div>
+        <div class="card__text">Multi-tier navigation converts learning and trading behaviors into usable rights. Immersive governance participation transforms knowledge accumulation into value creation.</div>
+      </div>
+      <div class="card">
+        <div class="card__icon card__icon--blue">🔍</div>
+        <div class="card__title">AI Risk Detection</div>
+        <div class="card__text">Behavioral AI monitors every account interaction, recognizes high-risk address patterns, and triggers automatic protective response before threats materialize into losses.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section section--dark">
+  <div class="container">
+    <div class="section-header section-header--center">
+      <div class="section-label">Getting Started</div>
+      <h2 class="section-title">Up and Trading in Minutes</h2>
+      <p class="section-subtitle">Truoux was built to remove every barrier between you and your first trade.</p>
+    </div>
+    <div class="grid grid--4">
+      <div style="text-align: center; padding: 32px 20px;">
+        <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-weight:800;font-size:1.25rem;color:#08090d;margin:0 auto 20px;">1</div>
+        <div style="font-family:var(--font-head);font-weight:600;font-size:1.0625rem;color:var(--white);margin-bottom:10px;">Create Account</div>
+        <div style="font-size:0.875rem;color:var(--muted);">One-click registration with flexible login and multi-language support. Ready in under 2 minutes.</div>
+      </div>
+      <div style="text-align: center; padding: 32px 20px;">
+        <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-weight:800;font-size:1.25rem;color:#08090d;margin:0 auto 20px;">2</div>
+        <div style="font-family:var(--font-head);font-weight:600;font-size:1.0625rem;color:var(--white);margin-bottom:10px;">Complete KYC</div>
+        <div style="font-size:0.875rem;color:var(--muted);">Streamlined identity verification under our AML/KYC compliance framework. Fast, secure, private.</div>
+      </div>
+      <div style="text-align: center; padding: 32px 20px;">
+        <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-weight:800;font-size:1.25rem;color:#08090d;margin:0 auto 20px;">3</div>
+        <div style="font-family:var(--font-head);font-weight:600;font-size:1.0625rem;color:var(--white);margin-bottom:10px;">Deposit Funds</div>
+        <div style="font-size:0.875rem;color:var(--muted);">Fund your account via crypto or fiat channels. Assets secured in multi-sig cold wallets immediately.</div>
+      </div>
+      <div style="text-align: center; padding: 32px 20px;">
+        <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-weight:800;font-size:1.25rem;color:#08090d;margin:0 auto 20px;">4</div>
+        <div style="font-family:var(--font-head);font-weight:600;font-size:1.0625rem;color:var(--white);margin-bottom:10px;">Start Trading</div>
+        <div style="font-size:0.875rem;color:var(--muted);">Access spot, derivatives, and asset management tools with guided onboarding and visual coaching.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSIGHTS / ARTICLES PREVIEW -->
+<section class="section">
+  <div class="container">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:48px;flex-wrap:wrap;gap:20px;">
+      <div>
+        <div class="section-label">Insights</div>
+        <h2 class="section-title" style="margin-bottom:0;">Latest from the Ecosystem</h2>
+      </div>
+      <a href="list.html" class="btn btn--outline">View All Insights →</a>
+    </div>
+    <div class="grid grid--3">
+      <a href="https://x.com/buoichieub/status/2057396859623313557" target="_blank" class="article-card" style="text-decoration:none;">
+        <div class="article-card__thumb">
+          <div class="article-card__thumb-inner" style="background:linear-gradient(135deg,rgba(0,229,160,0.15),rgba(0,119,255,0.15));">📊</div>
+        </div>
+        <div class="article-card__body">
+          <div class="article-card__meta">
+            <span class="article-card__tag">Analysis</span>
+            <span class="article-card__date">2026-05</span>
+          </div>
+          <div class="article-card__title">Industry Data Perspective: SKHTU Proof of Reserves & Asset Coverage Ratio</div>
+          <div class="article-card__excerpt">A deep-dive into reserve transparency metrics and what institutional asset coverage ratios reveal about exchange solvency.</div>
+          <div class="article-card__link">Read on X →</div>
+        </div>
+      </a>
+      <a href="https://open.substack.com/pub/buoichieu/p/industry-data-perspective-analysis?r=8ajglc&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true" target="_blank" class="article-card" style="text-decoration:none;">
+        <div class="article-card__thumb">
+          <div class="article-card__thumb-inner" style="background:linear-gradient(135deg,rgba(123,94,167,0.15),rgba(0,229,160,0.15));">🏛️</div>
+        </div>
+        <div class="article-card__body">
+          <div class="article-card__meta">
+            <span class="article-card__tag">Substack</span>
+            <span class="article-card__date">2026-05</span>
+          </div>
+          <div class="article-card__title">Exchange Ecosystem Building: Institutional Perspective on SKHTU Cooperation</div>
+          <div class="article-card__excerpt">How institutional cooperation models are reshaping exchange ecosystem strategies and creating new growth vectors.</div>
+          <div class="article-card__link">Read on Substack →</div>
+        </div>
+      </a>
+      <a href="https://medium.com/@buoichieubinhthuong472/industry-data-perspective-analysis-of-skhtu-proof-of-reserves-and-asset-coverage-ratio-ab938d9314cb" target="_blank" class="article-card" style="text-decoration:none;">
+        <div class="article-card__thumb">
+          <div class="article-card__thumb-inner" style="background:linear-gradient(135deg,rgba(245,183,49,0.15),rgba(255,77,109,0.12));">📰</div>
+        </div>
+        <div class="article-card__body">
+          <div class="article-card__meta">
+            <span class="article-card__tag">Medium</span>
+            <span class="article-card__date">2026-05</span>
+          </div>
+          <div class="article-card__title">SKHTU Proof of Reserves — Asset Coverage Ratio in Focus</div>
+          <div class="article-card__excerpt">An institutional data analysis of crypto exchange reserve mechanisms, examining coverage ratios and what they mean for users.</div>
+          <div class="article-card__link">Read on Medium →</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section class="section section--darker">
+  <div class="container">
+    <div class="section-header section-header--center">
+      <div class="section-label">Ecosystem Partners</div>
+      <h2 class="section-title">Connected to the Entire Web3 Ecosystem</h2>
+      <p class="section-subtitle">Truoux integrates deeply with the foundations powering the decentralized future.</p>
+    </div>
+    <div class="partners-strip">
+      <a href="https://ethereum.foundation" target="_blank" class="partner-badge"><span class="partner-badge__dot"></span> Ethereum Foundation</a>
+      <a href="https://solana.org" target="_blank" class="partner-badge"><span class="partner-badge__dot" style="background:var(--accent2)"></span> Solana Foundation</a>
+      <a href="https://cardanofoundation.org" target="_blank" class="partner-badge"><span class="partner-badge__dot" style="background:var(--accent3)"></span> Cardano Foundation</a>
+      <a href="https://polkadot.network" target="_blank" class="partner-badge"><span class="partner-badge__dot" style="background:var(--danger)"></span> Polkadot</a>
+      <a href="https://avax.network" target="_blank" class="partner-badge"><span class="partner-badge__dot" style="background:var(--danger)"></span> Avalanche</a>
+      <a href="https://near.org" target="_blank" class="partner-badge"><span class="partner-badge__dot"></span> NEAR Protocol</a>
+      <a href="https://cosmos.network" target="_blank" class="partner-badge"><span class="partner-badge__dot" style="background:var(--accent3)"></span> Cosmos Network</a>
+      <a href="https://chain.link" target="_blank" class="partner-badge"><span class="partner-badge__dot" style="background:var(--accent2)"></span> Chainlink Labs</a>
+      <a href="https://fil.org" target="_blank" class="partner-badge"><span class="partner-badge__dot" style="background:var(--accent2)"></span> Filecoin Foundation</a>
+      <a href="https://arbitrum.foundation" target="_blank" class="partner-badge"><span class="partner-badge__dot" style="background:var(--accent2)"></span> Arbitrum Foundation</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1.6fr;gap:80px;align-items:start;">
+      <div>
+        <div class="section-label">FAQ</div>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle" style="margin-bottom:32px;">Can't find what you're looking for? Our support team is available 24/7.</p>
+        <a href="#" class="btn btn--outline">Contact Support</a>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-item__q" onclick="toggleFaq(this)">
+            What licenses does Truoux hold?
+            <div class="faq-item__icon">+</div>
+          </div>
+          <div class="faq-item__body">
+            <div class="faq-item__a">Truoux holds two key US regulatory licenses: a Money Services Business (MSB) license issued by FinCEN (US Treasury), and a Regulation D exemption qualification from the US Securities and Exchange Commission (SEC), obtained in September 2025. We also maintain full AML/CTF compliance and underwent dual security audits by Hacken and SlowMist.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-item__q" onclick="toggleFaq(this)">
+            How are my assets protected on Truoux?
+            <div class="faq-item__icon">+</div>
+          </div>
+          <div class="faq-item__body">
+            <div class="faq-item__a">Over 95% of user funds are stored in multi-signature cold wallets, completely offline and protected from online threats. The remaining operational hot wallet funds are continuously monitored by our AI behavioral detection system. We also maintain cross-region disaster recovery backups with minute-level snapshot rollback capability.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-item__q" onclick="toggleFaq(this)">
+            Which countries and regions does Truoux support?
+            <div class="faq-item__icon">+</div>
+          </div>
+          <div class="faq-item__body">
+            <div class="faq-item__a">Truoux serves users in over 200 countries and regions with multi-language interface support. We have established localized operations in key emerging markets across Asia, South America, and beyond. Certain features or services may be restricted in specific jurisdictions — please consult our Terms of Service for regional details.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-item__q" onclick="toggleFaq(this)">
+            What trading products are available?
+            <div class="faq-item__icon">+</div>
+          </div>
+          <div class="faq-item__body">
+            <div class="faq-item__a">Truoux offers spot trading, derivatives (futures and contracts), asset management products, and strategy tools via our API. Our matching engine supports parallel order processing with millisecond-level execution, suitable for both retail traders and institutional algorithmic strategies.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-item__q" onclick="toggleFaq(this)">
+            Does Truoux offer an API for developers?
+            <div class="faq-item__icon">+</div>
+          </div>
+          <div class="faq-item__body">
+            <div class="faq-item__a">Yes. We provide standardized REST and WebSocket APIs covering market data subscription, order management, and account data. All endpoints are protected by permission verification and rate controls. Developers and institutional users can access custom data push and pull services for building automated trading systems.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-item__q" onclick="toggleFaq(this)">
+            How do I get started on Truoux?
+            <div class="faq-item__icon">+</div>
+          </div>
+          <div class="faq-item__body">
+            <div class="faq-item__a">Registration takes under 2 minutes — simply sign up with your email, complete our streamlined KYC identity verification, deposit funds, and you're ready to trade. Our visual onboarding guide and graphical operation flows are designed to get first-time users comfortable with the platform as quickly as possible.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="section--sm" style="background: linear-gradient(135deg, rgba(0,229,160,0.06) 0%, rgba(0,119,255,0.06) 100%); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <div class="container" style="text-align:center;">
+    <div class="section-label" style="justify-content:center;">Join Truoux</div>
+    <h2 style="font-family:var(--font-head);font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;letter-spacing:-0.03em;color:var(--white);margin:12px 0 20px;">Ready to Trade Without Limits?</h2>
+    <p style="color:var(--muted);font-size:1rem;margin-bottom:36px;max-width:480px;margin-left:auto;margin-right:auto;">Join 13 million+ traders building their financial future on a platform that was designed for them.</p>
+    <div class="flex-center gap-16" style="justify-content:center;">
+      <a href="#" class="btn btn--primary btn--lg">Create Free Account</a>
+      <a href="content.html" class="btn btn--ghost btn--lg">Read Whitepaper</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="nav__logo" style="margin-bottom:16px;">
+          <div class="nav__logo-mark">TX</div>
+          <div class="footer__brand-name">Truoux</div>
+        </div>
+        <p class="footer__tagline">A next-generation digital asset exchange. Trade without barriers — assets fully connected.</p>
+        <div class="footer__badges">
+          <span class="footer__badge">MSB Licensed</span>
+          <span class="footer__badge">SEC Reg. D</span>
+          <span class="footer__badge">Hacken Audited</span>
+          <span class="footer__badge">SlowMist Verified</span>
+        </div>
+      </div>
+      <div>
+        <div class="footer__col-title">Platform</div>
+        <div class="footer__links">
+          <a href="#">Spot Trading</a>
+          <a href="#">Derivatives</a>
+          <a href="#">Asset Management</a>
+          <a href="#">Strategy Tools</a>
+          <a href="#">API Access</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer__col-title">Company</div>
+        <div class="footer__links">
+          <a href="about.html">About Us</a>
+          <a href="list.html">Insights</a>
+          <a href="content.html">Whitepaper</a>
+          <a href="#">Careers</a>
+          <a href="#">Press</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer__col-title">Support</div>
+        <div class="footer__links">
+          <a href="#">Help Center</a>
+          <a href="#">API Docs</a>
+          <a href="#">Security</a>
+          <a href="#">Compliance</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="footer__copy">© 2025 Truoux Inc. All rights reserved. Incorporated in the United States, April 2019.</div>
+      <div class="footer__bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Risk Disclosure</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Slider
+let current = 0;
+const total = 4;
+function updateSlider() {
+  document.getElementById('sliderTrack').style.transform = `translateX(-${current * 100}%)`;
+  document.querySelectorAll('.slider__dot').forEach((d, i) => d.classList.toggle('active', i === current));
+}
+function slideNext() { current = (current + 1) % total; updateSlider(); }
+function slidePrev() { current = (current - 1 + total) % total; updateSlider(); }
+function goToSlide(i) { current = i; updateSlider(); }
+setInterval(slideNext, 5000);
+
+// FAQ
+function toggleFaq(el) {
+  const item = el.parentElement;
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+
+// Hamburger
+function toggleMenu(btn) {
+  btn.classList.toggle('open');
+}
+</script>
+</body>
+</html>
